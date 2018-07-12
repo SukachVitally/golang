@@ -16,8 +16,7 @@ func sort(list []int) []int {
 		return list
 	}
 
-	centerIndex := int(len(list) / 2)
-	centerElement := list[centerIndex]
+	centerElement := list[int(len(list)/2)]
 
 	leftList := []int{}
 	centerList := []int{}
