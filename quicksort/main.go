@@ -5,23 +5,7 @@ import (
 )
 
 func main() {
-	strList := []string{"first", "second"}
-	intList := []int{1, 10, 8, 7, 5, 9, 7}
-	boolList := []bool{true, false, true}
-
-	list := make([]interface{}, len(strList)+len(intList)+len(boolList))
-	for i, s := range strList {
-		list[i] = s
-	}
-
-	for i, s := range intList {
-		list[i+len(strList)] = s
-	}
-
-	for i, s := range boolList {
-		list[i+len(strList)+len(intList)] = s
-	}
-
+	list := []interface{}{"first", "second", 1, 10, 8, 7, 5, 9, 7, true, false, true}
 	for _, num := range sort(list) {
 		fmt.Println(num)
 	}
